@@ -15,4 +15,17 @@ def display_board(board):
     
 test_board = ['#', 'X', 'X', 'X','O', 'X','O', 'X','O', '#']
 display_board(test_board)
-             
+display_board(test_board)
+
+def player_input():
+    marker = ''
+
+    while not (marker == 'X' and marker == 'O'):
+        marker = input('Player1: Choose X or O: ').upper()
+    
+    if marker == 'X':
+        return('X', 'O')
+    else:
+        return('O', 'X')
+
+player1_marker, player2_marker = player_input()
